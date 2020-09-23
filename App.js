@@ -7,16 +7,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  FlatList,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, View, Text, Button, FlatList} from 'react-native';
 
 const App = () => {
   const addEntry = () => {
@@ -78,7 +69,5 @@ const App = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
