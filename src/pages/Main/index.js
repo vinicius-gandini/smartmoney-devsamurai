@@ -5,16 +5,8 @@ import BalancePanel from '../../components/BalancePanel';
 import EntrySummary from '../../components/EntrySummary';
 import EntryList from '../../components/EntryList';
 
-import {saveEntry} from '../../services/Entries';
-
 const Main = ({navigation}) => {
   const currentBalance = 2064.35;
-
-  // () => navigation.navigate('NewEntry)'
-
-  const save = () => {
-    saveEntry();
-  };
 
   const entriesGrouped = [
     {key: '1', description: 'Alimentação', amount: 210},
@@ -33,7 +25,10 @@ const Main = ({navigation}) => {
   return (
     <View style={styles.container}>
       <BalancePanel currentBalance={currentBalance} />
-      <Button title="Adicionar" onPress={save} />
+      <Button
+        title="Adicionar"
+        onPress={() => navigation.navigate('NewEntry')}
+      />
       <EntrySummary entriesGrouped={entriesGrouped} />
       <EntryList entries={entries} />
     </View>
